@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { StepData } from '../types';
-import { CodeBlock } from './CodeBlock';
+import { StepData } from '../types.ts';
+import { CodeBlock } from './CodeBlock.tsx';
 import { Download, AlertTriangle } from 'lucide-react';
 
 interface TimelineItemProps {

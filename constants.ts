@@ -1,4 +1,4 @@
-import { StepData } from './types';
+import { StepData } from './types.ts';
 
 export const STEPS: StepData[] = [
   {
