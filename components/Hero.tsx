@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <section className="pt-32 pb-20 px-6 flex flex-col items-center text-center max-w-3xl mx-auto">
       <div className="mb-6 inline-flex items-center px-3 py-1 rounded-full border border-accent/30 bg-accent/10">
@@ -20,3 +20,5 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
+
+export default Hero;

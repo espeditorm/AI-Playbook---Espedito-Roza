@@ -1,14 +1,15 @@
-export interface ToggleOption {
+// Interfaces usadas apenas para documentação no código (removido export para compatibilidade global)
+interface ToggleOption {
   label: string;
   code: string;
 }
 
-export interface StepData {
+interface StepData {
   id: number;
   title: string;
   description: string;
-  codeSnippet: string; // Used for static code blocks
+  codeSnippet: string;
   type: 'code' | 'download' | 'toggle' | 'handoff';
   downloadFileName?: string;
-  toggleContent?: ToggleOption[]; // Used for toggleable content
+  toggleContent?: ToggleOption[];
 }

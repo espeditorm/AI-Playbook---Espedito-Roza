@@ -1,6 +1,4 @@
-import { StepData } from './types.ts';
-
-export const STEPS: StepData[] = [
+export const STEPS = [
   {
     id: 1,
     title: "Definição de Requisitos (PRD)",
@@ -33,18 +31,17 @@ Não foque em elementos como autenticação ou conexão com bancos de dados agor
     description: "Revise o conteúdo gerado pela IA. Se estiver coerente, salve o conteúdo em um arquivo de texto simples (.txt). Isso evita alucinações de contexto em etapas futuras.",
     type: 'download',
     downloadFileName: 'meu-prd.txt',
-    codeSnippet: `Conteúdo do PRD Simulado...` // This is hidden now, but required for the download file generation
+    codeSnippet: `Conteúdo do PRD Simulado...`
   },
   {
     id: 3,
     title: "Estratégia de Prompting",
     description: "Agora transformamos o PRD validado em instruções técnicas para o Agente Criador (como Lovable, v0, etc). A clareza aqui define a qualidade do código final.",
     type: 'toggle',
-    codeSnippet: '', // Ignorado para o tipo toggle, usamos toggleContent abaixo
+    codeSnippet: '',
     toggleContent: [
       {
         label: 'Prompt Único',
-        // --- EDITE O CONTEÚDO DO PROMPT ÚNICO ABAIXO ---
         code: `Você é um agente de IA especializado em transformar Product Requirement Documents (PRDs) em protótipos funcionais completos utilizando ferramentas de criação de produtos digitais como Lovable, DeepSeek Coder, Bolt.new e V0 by Vercel. Seu objetivo é ler o PRD fornecido pelo usuário e gerar todo o produto em um único prompt, combinando fundamentos, UI inicial, funcionalidades, fluxos completos, modelo de dados, estados, casos extremos e refinamento final — tudo sem incluir integrações externas.
  INSTRUÇÕES
 Leia e compreenda o PRD fornecido.
@@ -89,7 +86,6 @@ Produza o produto final pronto para handoff, sem incluir integrações externas.
       },
       {
         label: '3 Prompts',
-        // --- EDITE O CONTEÚDO DO PROMPT PASSO A PASSO ABAIXO ---
         code: `Você é um agente de IA especializado em transformar Product Requirement Documents (PRDs) em prompts otimizados para ferramentas de prototipação baseadas em IA, como Lovable, DeepSeek Coder, Bolt.new e V0 by Vercel.
 Seu objetivo é transformar qualquer PRD em 3 prompts progressivos, complementares e operacionais, dividindo o escopo de maneira lógica para que o agente de criação gere o produto completo sem sobrecarga — e já entregando algo visual no Prompt 1.
 
@@ -145,6 +141,6 @@ A saída final deve ser totalmente copiável e pronta para usar em ferramentas d
     title: "Execução no Agente Criador",
     description: "Realize o handoff. Copie o prompt estratégico junto com o PRD e insira na ferramenta de prototipação.",
     type: 'handoff',
-    codeSnippet: `` // Removed example code as requested
+    codeSnippet: ``
   }
 ];

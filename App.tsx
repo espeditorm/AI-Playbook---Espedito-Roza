@@ -1,11 +1,11 @@
 import React from 'react';
-import { Header } from './components/Header.tsx';
-import { Hero } from './components/Hero.tsx';
-import { TimelineItem } from './components/TimelineItem.tsx';
-import { ArrowUp } from 'lucide-react';
-import { STEPS } from './constants.ts';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import TimelineItem from './components/TimelineItem';
+import { ArrowUp } from './components/Icons';
+import { STEPS } from './constants';
 
-const App: React.FC = () => {
+const App = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
